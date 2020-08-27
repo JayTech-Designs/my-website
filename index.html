@@ -1,0 +1,846 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Specific Meta
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="Personal Portfolio is a modern presentation HTML5 Portfolio HTML Template.">
+    <meta name="keywords" content="HTML5, Template, Design, portfolio, Personal Portfolio, Single portfolio" />
+    <meta name="author" content="HTMLguru">
+
+    <!-- Titles
+    ================================================== -->
+    <title>Personal Portfolio</title>
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="assets/images/site-icon.png">
+    <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114.png">
+
+    <!-- Custom Font
+    ================================================== -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="assets/css/simple-scrollbar.css">
+    <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="assets/js/modernizr.min.js"></script>
+    <script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</head>
+
+<body>
+    <!-- Preloader
+    ================================================== --> 
+    <div class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <span></span>
+                <span></span>
+            </div><!-- /preloader-icon -->
+        </div><!-- /preloader-inner -->
+    </div><!-- /preloader -->
+
+    <!-- Header
+    ================================================== --> 
+    <header class="site-header sticky-header">
+        <div class="container-fluid pd-0">
+            <div class="row no-gutters">
+                <div class="col-xl-7">
+                    <div class="header-left-block">  
+                        <!-- Site Branding -->
+                        <div class="site-branding">
+                            <img src="assets/images/logo.png" alt="Site Logo" class="responsive-img" />
+                        </div><!--  /.site-branding -->
+
+                        <!-- Site Navigation -->
+                        <div class="site-navigation">
+                            <div class="hamburger-menus">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <nav class="navigation">
+                                <div class="overlaybg"></div><!--  /.overlaybg -->
+                                <!-- Main Menu -->
+                                <div class="menu-wrapper">
+                                    <div class="menu-content">
+                                        <ul class="mainmenu">
+                                            <li>
+                                                <a href="#about-block">About</a>
+                                            </li>         
+                                            <li>
+                                                <a href="#service-block">Service</a>
+                                            </li>                                    
+                                            <li>
+                                                <a href="#portfolio-block">Works</a>
+                                            </li>
+                                            <li>
+                                                <a href="#blog-block">Q&A</a>
+                                            </li>
+                                            <li>
+                                                <a href="#contact-block">Contact</a>
+                                            </li>
+                                        </ul> <!-- /.menu-list -->
+                                    </div> <!-- /.hours-content-->
+                                </div><!-- /.menu-wrapper --> 
+                            </nav>
+                        </div><!--  /.site-navigation -->
+                    </div><!--  /.header-left-block -->
+                </div><!--  /.col-xl-7 -->
+            </div><!--  /.row -->
+        </div><!--  /.container-fluid -->
+    </header><!-- /.site-header -->
+
+    <!-- Hero Block
+    ================================================== -->
+    <section class="hero-block" id="hero-block">
+        <div class="container-xl">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="horizontal-border"></div><!--  /.horizontal-border -->
+                    <h2 class="hero-subheading">WELCOME TO</h2>
+                    <h2 class="hero-title">JayTech Design</h2><!--  /.hero-title -->
+                    <h2 class="hero-subheading"><i>It's your call, our draw...</i></h2>
+                    <ul class="hero-designation">
+                        <li>Graphic Design</li>
+                        <li>Logo Design</li>
+                        <li>Video Animation</li>
+                    </ul><!--  /.hero-designation -->
+                     <a href="https://player.https://vimeo.com/452211909" class="hero-video-btn video-popup">
+                        <i class="fas fa-play"></i>
+                        <span class="video-title">ABOUT US</span>
+                    </a>
+                </div><!--  /.col-lg-8 -->
+            </div><!--  /.row -->
+        </div><!--  /.container-fluid -->
+        <div class="hg-background">
+            <div class="hg-background-image" data-bg-image="assets/images/banner/hero-banner.jpg"></div><!--  /.hg-background-image -->
+        </div><!--  /.hg-background -->
+    </section><!--  /.hero-block -->
+
+    <!-- About Block
+    ================================================== -->
+    <section class="about-block pd-t-105" id="about-block">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="title-counter">01</h2><!--  /.title-counter -->
+                        <h2 class="title-main">Who We Are</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-black"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-black"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+            <!-- Content Row -->
+            <div class="row justify-content-md-center mrb-75">
+                <div class="col-lg-10 pd-l-60 pd-r-60">            
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="description mrb-75 w-500 fts-18">
+                                In an extremely competitive marketplace, holding up a unique visual brand representation is very crucial.
+
+                               Our aim is to provide graphical solutions to the challanges small and large scale businesses face. We help our clients with their logos and advertising materials such as Business Cards,
+                            Flyers, Banners, Brochures, explainer videos, short video ads which will in turn enable our clients meet their business goals and also stand out from their competitors.
+
+                            <p>So whether you're a startup or an already established business in search of a greater brand, our team of creative designers are here to help you grow.</p>
+                            </p>
+                        </div><!--  /.col-lg-12 -->
+                    </div><!--  /.row -->
+                            </div>
+                        </div><!-- /.col-lg-6 -->
+                    </div><!--  /.row -->
+                </div><!--  /.col-lg-10 -->
+            </div><!--  /.row -->
+            
+            <!-- Mock Up Content Row -->
+            <div class="row justify-content-md-center">
+                <div class="col-lg-11">
+                    <div class="mock-up-block ml-b-135" data-animate="hg-fadeInUp">
+                        <img src="assets/images/Asset 2.png" alt="Author Mock Up" />
+                    </div><!--  /.mock-up-block -->
+                </div><!--  /.col-lg-10 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </section><!--  /.about-block -->
+    &nbsp;
+<!-- Service Block -->
+    <section class="service-block bg-snow pd-t-105 pd-b-120" id="service-block">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="title-counter">02</h2><!--  /.title-counter -->
+                        <h2 class="title-main">Services</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-black"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-black"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+            
+            <!-- Content Row -->
+            <div class="row">
+                <div class="col-lg-12">                
+                    <div class="service-carousel owl-carousel" data-owl-items="3" data-owl-margin="30" data-owl-dots="1" data-owl-loop="1" data-owl-center="1" data-animate="hg-fadeInUp">
+
+                        <div class="item">
+                            <div class="service-card">
+                                <div class="service-icon color-deep-cerise">
+                                        <i class="fas fa-palette"></i>
+                                </div><!--  /.service-icon -->
+                                    <h2 class="service-title">Graphic Design</h2><!--  /.service-title -->
+                                        <ul class="service-list">
+                                            <li>Flyer Design</li>
+                                            <li>Book Cover Illustration</li>
+                                            <li>Business Card</li>
+                                            <li>Cartoon Portrait Illustration</li>  
+                                        </ul><!--  /.service-list -->
+                            </div><!--  /.service-card -->
+                        </div><!--  /.item -->
+
+                        <div class="item">
+                            <div class="service-card">
+                                <div class="service-icon color-deep-cerise">
+                                    <i class="fas fa-pen-nib"></i>
+                                </div><!--  /.service-icon -->
+                                <h2 class="service-title">Logo Design</h2><!--  /.service-title -->
+                                <ul class="service-list">
+                                    <li>Typography Logo</li>
+                                    <li>Icon\Symbol Logo</li>
+                                    <li>Combination Logo</li>
+                                </ul><!--  /.service-list -->
+                            </div><!--  /.service-card -->
+                        </div><!--  /.item -->                    
+
+                                            
+
+                        <div class="item">
+                            <div class="service-card">
+                                <div class="service-icon color-deep-cerise">
+                                    <i class="fas fa-video"></i>
+                                </div><!--  /.service-icon -->
+                                <h2 class="service-title">Video Animation</h2><!--  /.service-title -->
+                                <ul class="service-list">
+                                    <li>2D Explainer Videos</li>
+                                    <li>3D Character Explainer Videos</li>
+                                    <li>Text Animation</li>
+                                </ul><!--  /.service-list -->
+                            </div><!--  /.service-card -->
+                        </div><!--  /.item -->
+                    </div><!--  /.owl-carousel -->
+                </div><!--  /.col-lg-12 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </section><!--  /.service-block -->
+    <!-- Fun Fact Block
+    ================================================== -->
+    <section class="fun-facts-block bg-black-russian pd-t-235 pd-b-120">
+        <div class="container hg-promo-numbers">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="tg-promo-number text-center">
+                        <div class="odometer" data-odometer-final="117">0</div><!--  /.odometer -->
+                        <h4 class="promo-title">Happy Client</h4><!--  /.promo-title -->
+                    </div><!--  /.tg-promo-number -->
+                </div><!--  /.col-sm-6 -->
+                <div class="col-sm-6 col-lg-3">
+                    <div class="tg-promo-number text-center">
+                        <div class="odometer" data-odometer-final="20">0</div><!--  /.odometer -->
+                        <h4 class="promo-title">Years Experience</h4><!--  /.promo-title -->
+                    </div><!--  /.tg-promo-number -->
+                </div><!--  /.col-sm-6 -->                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="tg-promo-number text-center">
+                        <div class="odometer" data-odometer-final="16">0</div><!--  /.odometer -->
+                        <h4 class="promo-title">Award Winer</h4><!--  /.promo-title -->
+                    </div><!--  /.tg-promo-number -->
+                </div><!--  /.col-sm-6 -->                
+                <div class="col-sm-6 col-lg-3">
+                    <div class="tg-promo-number text-center">
+                        <div class="odometer" data-odometer-final="156">0</div><!--  /.odometer -->
+                        <h4 class="promo-title">Project Complete</h4><!--  /.promo-title -->
+                    </div><!--  /.tg-promo-number -->
+                </div><!--  /.col-sm-6 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </section><!--  /.fun-facts-block -->
+
+    <!-- Our Work Step
+    ================================================== -->
+    <section class="call-to-action pd-t-105 pd-b-120">
+        <div class="container">
+            <h2 class="call-to-title">Let's Work On Your Next Projects</h2><!--  /.call-to-title -->
+            <a href="#" class="btn btn-call-to mrt-30">Get Started</a>
+        </div><!--  /.container -->
+
+        <div class="hg-background hg-overlay" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+            <div class="hg-background-image hg-parallax-element" data-bg-image="assets/images/step-bg-01.jpg"></div><!--  /.hg-background-image -->
+        </div><!--  /.hg-background -->
+    </section><!--  /.our-work-step -->
+
+    <!-- Portfolio Block
+    ================================================== -->
+    <section class="portfolio-block pd-t-105 pd-b-90" id="portfolio-block">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="title-counter">03</h2><!--  /.title-counter -->
+                        <h2 class="title-main">Portfolio</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-black"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-black"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+<!-- Gallery -->
+ <div class="row justify-content-md-center mrb-75">
+                <div class="col-lg-10 pd-l-60 pd-r-60">            
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <p class="description mrb-75 w-500 fts-18">Click Any Of The Buttons Below To Display More Of Our Works
+                            </p>
+                        </div><!--  /.col-lg-12 -->
+                    </div><!--  /.row -->
+                            </div>
+                        </div><!-- /.col-lg-6 -->
+                    </div><!--  /.row -->
+                </div><!--  /.col-lg-10 -->
+            </div><!--  /.row -->
+<!-- MAIN -->
+<div class="main" align="center">
+<div id="myBtnContainer">
+  <button class="btn" onclick="filterSelection('nature')">Logo Design</button>
+  <button class="btn" onclick="filterSelection('cars')">Graphic Designs</button>
+  <button class="btn" onclick="filterSelection('people')">Video Animation</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="rows">
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/mavin-land-for-cash.png" alt="mavin-land-for-cash" style="width:100%">
+                <h4>Mavin Land For Cash</h4>
+                <p>Logo design for a Real Estate Agency</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/my-best-web-shop.png" alt="my-best-web-shop" style="width:100%">
+                <h4>My Best Web Shop</h4>
+                <p>Logo design for a Pottery store</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jLzFj3pKCww" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Promotional Video for ROA Virtual Academy</h4>
+                <p></p>
+              </div>
+            </div>
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/my-best-web-shop.png" alt="my-best-web-shop" style="width:100%">
+                <h4>My Best Web Shop</h4>
+                <p>Logo design for Pottery</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/image2.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <img src="assets/images/portfolio/image3.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/padup-initiative.png" alt="padup-initiative" style="width:100%">
+                <h4>PadUp Initiative</h4>
+                <p>Logo Design for a Non-Profit Organization</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/image2.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <img src="assets/images/portfolio/image3.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/roa-virtual-academy.png" alt="roa-virtual-academy" style="width:100%">
+                <h4>ROA Virtual Academy</h4>
+                <p>Branding design for Online Learning School</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/image2.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <img src="assets/images/portfolio/image3.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/nutrifit.png" alt="Mountains" style="width:100%">
+                <h4>Nutrifit</h4>
+                <p>App Icon design for a Fitness App</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/image2.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <img src="assets/images/portfolio/image3.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column nature">
+            <div class="content">
+                <img src="assets/images/portfolio/chib.ng.png" alt="Chib" style="width:100%">
+                <h4>Chib.Ng</h4>
+                <p>App Icon Design</p>
+              </div>
+            </div> 
+            <div class="column cars">
+              <div class="content">
+                <img src="assets/images/portfolio/image2.png" alt="Car" style="width:100%">
+                <h4>Retro</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+            <div class="column people">
+              <div class="content">
+                <img src="assets/images/portfolio/image3.png" alt="Car" style="width:100%">
+                <h4>Girl</h4>
+                <p>Lorem ipsum dolor..</p>
+              </div>
+            </div>
+  </div>
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<!-- End of Gallery -->
+
+        </div><!--  /.container -->
+    </section><!--  /.portfolio-block -->
+
+    <!-- Testimonial Block
+    ================================================== -->
+    <section class="testimonial-block pd-t-105 pd-b-120">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title text-center">
+                        <h2 class="title-counter color-dim-gray-im">04</h2><!--  /.title-counter -->
+                        <h2 class="title-main color-white-im">Testimonial</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-white"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-white"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+            <!-- Content Row -->
+            <div class="row justify-content-md-center">
+                <div class="col-md-10">            
+                    <div class="testimonial-carousel owl-carousel" data-owl-items="1" data-owl-dots="1" data-owl-margin="30" data-animate="hg-fadeInUp">
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="client-thumb">
+                                    <img src="assets/images/testimonials/isatong.png" alt="Isatong" />
+                                </div><!--  /.client-thumb -->
+                                <div class="testimonial-details">
+                                    <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Emmanuel U.<p>CEO of Isatong Limited</p></h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>" I recommend JayTech Designs services to all. Their services is one the best. Our Company has used them for all our Promotions with great results."</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="client-thumb">
+                                    <img src="assets/images/testimonials/joe-mavin.png" alt="joe-mavin" />
+                                </div><!--  /.client-thumb -->
+                                <div class="testimonial-details">
+                                    <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Joe Mavin<p>Operations Manager - Bazebo LLC</h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>"We outsourced our project to JayTech Designs, they paid close attention to 
+                                        details; active listeners, and they made sure they delivered on time. Very simple
+                                    and clean work. We will be back!"</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="client-thumb">
+                                    <img src="assets/images/testimonials/armeinc.png" alt="armeinc" />
+                                </div><!--  /.client-thumb -->
+                                <div class="testimonial-details">
+                                    <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Samantha Matthews<p>CEO of Armeinc</p></h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>"This is my first time working with this gig, I must say that JayTech Designs does awesome work. They were spot on with what I asked for, I will definitely be
+                                        back for another video."</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+                    </div><!--  /.owl-carousel -->
+                </div><!--  /.col-md-10 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+        
+        <!-- Background Block -->
+        <div class="hg-background hg-overlay" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+            <div class="hg-background-image hg-parallax-element" data-bg-image="assets/images/contact-bg.jpg"></div><!--  /.hg-background-image -->
+        </div><!--  /.hg-background -->
+    </section><!--  /.testimonial-block -->
+
+    <!-- Brand Block
+    ================================================== -->
+    <div class="work-for-brand bg-black-russian-2 pd-t-120 pd-b-120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col">
+                    <a href="#"><img src="assets/images/company/rva.png" alt="RVA" /></a>
+                </div><!--  /.col -->                
+                <div class="col">
+                    <a href="#"><img src="assets/images/company/mavin-land-4-cash.png" alt="mavin-land-4-cash" /></a>
+                </div><!--  /.col -->                
+                <div class="col">
+                    <a href="#"><img src="assets/images/company/padup.png" alt="Padup" /></a>
+                </div><!--  /.col -->               
+                <div class="col">
+                    <a href="#"><img src="assets/images/company/my-best-pottery-shop.png" alt="my-best-pottery-shop" /></a>
+                </div><!--  /.col -->                
+                <div class="col">
+                    <a href="#"><img src="assets/images/company/chib.ng.png" alt="Chib" /></a>
+                </div><!--  /.col -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </div><!--  /.work-for-brand -->
+
+    <!-- Blog Block
+    ================================================== -->
+    <section class="blog-block pd-t-105 pd-b-90" id="blog-block">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="title-counter">05</h2><!--  /.title-counter -->
+                        <h2 class="title-main">Q&A</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-black"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-black"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+            
+            <!-- Content Row -->
+         <div class="row justify-content-md-center">
+                <div class="col-md-10">            
+                    <div class="testimonial-carousel owl-carousel" data-owl-items="1" data-owl-dots="1" data-owl-margin="30" data-animate="hg-fadeInUp">
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="testimonial-details">
+                                     <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Question</h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>Answer</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="testimonial-details">
+                                     <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Question</h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>Answer</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+
+                        <div class="item">
+                            <div class="client-testimonial">
+                                <div class="testimonial-details">
+                                    <div class="client-area">
+                                        <div class="client-detail">
+                                            <h4 class="client-name">Question</h4><!--  /.client-name -->
+                                        </div><!--  /.client-detail -->
+                                    </div><!--  /.client-area -->
+                                    <div class="details">
+                                        <p>Answer</p>
+                                    </div><!--  /.details -->
+                                </div><!--  /.testimonial-details -->
+                            </div><!--  /.client-testimonial -->
+                        </div><!--  /.item -->
+                    </div><!--  /.owl-carousel -->
+                </div><!--  /.col-md-10 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </section><!--  /.blog-block -->
+
+    <!-- Contact Block
+    ================================================== -->    
+    <section class="contact-block pd-t-105 pd-b-120" id="contact-block">
+        <div class="container">
+            <!-- Title Row -->
+            <div class="row">
+                <div class="col-12 text-center">
+                    <div class="section-title">
+                        <h2 class="title-counter color-dim-gray-im">05</h2><!--  /.title-counter -->
+                        <h2 class="title-main color-white-im">Get In Touch</h2><!-- /.title-main -->
+                        <div class="title-border">
+                            <span class="small-border bg-white"></span>
+                            <span class="large-border bg-deep-cerise"></span>
+                            <span class="small-border bg-white"></span>
+                        </div><!--  /.title-border -->
+                    </div><!--  /.section-title -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+            <!-- Content Row -->
+            <div class="row justify-content-md-center">
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-md-4">                          
+                            
+                        </div><!--  /.col-md-4 -->
+
+                        <div class="col-md-8">
+                            <form method="post" class="contact-form white-theme hg-form-email" data-php-path="assets/php/email.php">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Name *</label>
+                                        <input name="name" type="text" class="form-control" />
+                                    </div><!--  /.col-md-6 -->                 
+
+                                    <div class="col-md-6">
+                                        <label>Email *</label>
+                                        <input name="email" type="email" class="form-control" />
+                                    </div><!--  /.col-md-6 -->
+
+                                    <div class="col-md-12">
+                                        <label>Subject</label>
+                                        <input name="subject" type="text" class="form-control" />
+                                    </div><!--  /.col-md-12 -->
+
+                                    <div class="col-md-12">
+                                        <label>Your Message</label>
+                                        <textarea name="message" cols="30" rows="10" class="form-control"></textarea>
+                                    </div><!--  /.col-md-12 -->
+
+                                    <div class="col-md-12">
+                                        <button type="submit" class="btn btn-default btn-contact">Send A Message</button>
+                                    </div><!--  /.col-md-12 -->
+                                </div><!--  /.row -->
+                            </form><!--  /.contact-form -->
+                        </div><!--  /.col-md-8 -->
+                    </div><!--  /.row -->
+                </div><!--  /.col-lg-10 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+
+        <!-- Background Block -->
+        <div class="hg-background hg-overlay" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+            <div class="hg-background-image hg-parallax-element" data-bg-image="assets/images/page-banner.jpg"></div><!--  /.hg-background-image -->
+        </div><!--  /.hg-background -->
+    </section><!--  /.contact-block -->
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="site-footer pd-t-75 pd-b-75">
+        <div class="container text-center">
+            <!-- Scroll Top -->
+            <div class="row">
+                <div class="col-12">
+                    <a href="#top" class="back-to-top">
+                        <span class="text">Back <br>To Top</span>
+                        <i class="fas fa-angle-up"></i>
+                    </a>
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+            <!-- Social Link -->
+            <div class="row">
+                <div class="col-12">
+                    <ul class="footer-social mrt-30 mrb-30">
+                        <li><a href="https://www.facebook.com/jamestechdesigns/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/jaytech_designs/">Instagram</a></li>
+                        <li><a href="https://www.behance.net/jamesudotong">Behance</a></li>
+                        <!-- <li><a href="#">Dribble</a></li> -->
+                    </ul><!--  /.footer-social -->
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+
+            <!-- Copy Right -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="copyright-text">Designed by IronicWebsites<i class="fas fa-heart"></i> 2020. All rights reserved</p>
+                </div><!--  /.col-12 -->
+            </div><!--  /.row -->
+        </div><!--  /.container -->
+    </footer><!--  /.site-footer -->
+
+    <!-- All The JS Files
+    ================================================== --> 
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/jquery.fitvids.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/simple-scrollbar.min.js"></script>
+    <script src="assets/js/scrolla.jquery.min.js"></script>
+    <script src="assets/js/odometer.min.js"></script>
+    <script src="assets/js/isInViewport.jquery.js"></script>
+    <script src="assets/js/main.js"></script><!-- main-js -->
+</body>
+</html>
